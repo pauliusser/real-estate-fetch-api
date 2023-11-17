@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Add your property for sale</h1>
+			<h2>Yes, you can sell your property and get cash!</h2>
+		</header>
+		<main class="page-wrapper">
+			<div class="input-wrapper">
+				<h2>Add Property</h2>
+
+				<label for="img">Img</label>
+				<input type="text" name="img" id="img" placeholder="image url here" />
+
+				<label for="price">Price, EUR</label>
+				<input type="number" name="price" id="price" placeholder="enter the price" />
+
+				<label for="description">Description</label>
+				<textarea name="description" id="description" cols="30" rows="10" placeholder="Add a description"></textarea>
+
+				<label for="city">City</label>
+				<input list="cities" name="city" id="city" placeholder="City" />
+				<datalist id="cities">
+					<option value="Vilnius"></option>
+					<option value="Kaunas"></option>
+					<option value="Klaipeda"></option>
+				</datalist>
+				<br />
+				<button id="add-property" class="add-btn">Add Property</button>
+				<div id="message">success!</div>
+			</div>
+		</main>
+		<script src="./add.js"></script>
+	</body>
+</html>
