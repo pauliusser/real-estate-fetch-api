@@ -7,16 +7,16 @@ let storedNtObjects = [];
 
 class Btn {
 	isClicked = false;
-	constructor(btnObject, cityName) {
+	constructor(btnObject, cityFilterName) {
 		this.btnObject = btnObject;
-		this.cityName = cityName;
+		this.cityFilterName = cityFilterName;
 		this.btnObject.addEventListener("click", () => this.click());
 	}
 	click() {
 		console.log("click");
 		if (this.isClicked === false) {
 			resetButtons();
-			buildFilteredBy(this.cityName);
+			buildFilteredBy(this.cityFilterName);
 			this.btnObject.setAttribute("class", "is-clicked");
 			this.isClicked = true;
 		} else {
@@ -40,6 +40,7 @@ function resetButtons() {
 	kaunasBtn.reset();
 	klaipedaBtn.reset();
 }
+
 firstDraw();
 async function firstDraw() {
 	const fetchedNtObjects = await fetchNtObjects();
